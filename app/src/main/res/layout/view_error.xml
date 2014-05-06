@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:textColor="@color/error"
     android:fontFamily="sans-serif-thin"
-    android:textStyle="italic"
     android:textSize="18sp"
     android:singleLine="true"
     />

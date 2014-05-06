@@ -2,6 +2,6 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <alpha
         android:fromAlpha="0.0"
-        android:toYDelta="1.0"
-        android:duration="@android:integer/config_mediumAnimTime"/>
+        android:toAlpha="1.0"
+        android:duration="@android:integer/config_shortAnimTime"/>
 </set>

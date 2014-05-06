@@ -3,7 +3,6 @@ package com.flavienlaurent.minimalform.app;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -55,11 +54,21 @@ public class MainActivity extends Activity {
     private ProgressBar mProgressbar;
     private TextView mStepText;
     private View mCompletedView;
+    private View mRetryButton;
 
     private View.OnClickListener mOnNextButtonClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             nextStep();
+        }
+    };
+
+    private View.OnClickListener mOnRetryButtonClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            hideFinalView();
+            mStepIndex = 0;
+            updateStep();
         }
     };
 
@@ -86,6 +95,7 @@ public class MainActivity extends Activity {
 
         mInput.setOnEditorActionListener(mOnInputEditorActionListener);
         mNextButton.setOnClickListener(mOnNextButtonClickListener);
+        mRetryButton.setOnClickListener(mOnRetryButtonClickListener);
         mErrorSwitcher.setText("");
 
         if(savedInstanceState == null) {
@@ -133,12 +143,25 @@ public class MainActivity extends Activity {
         if(mStepIndex >= maxStep()) {
             InputMethodManager imm = (InputMethodManager)getSystemService( Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(mInput.getWindowToken(), 0);
-            mCompletedView.setAlpha(0.0f);
-            mCompletedView.setVisibility(View.VISIBLE);
-            mCompletedView.animate().alpha(1f);
+            showFinalView();
             return;
         }
         updateViews();
+    }
+
+    private void hideFinalView() {
+        mCompletedView.animate().alpha(0f).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                mCompletedView.setVisibility(View.GONE);
+            }
+        });
+    }
+
+    private void showFinalView() {
+        mCompletedView.setAlpha(0.0f);
+        mCompletedView.setVisibility(View.VISIBLE);
+        mCompletedView.animate().alpha(1f);
     }
 
     private void updateViews() {
@@ -241,6 +264,7 @@ public class MainActivity extends Activity {
         mProgressbar = (ProgressBar) findViewById(R.id.progressbar);
         mStepText = (TextView) findViewById(R.id.step_text);
         mCompletedView = findViewById(R.id.completed);
+        mRetryButton = findViewById(R.id.retry);
     }
 
     private static final class Step {

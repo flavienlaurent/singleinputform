@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
                 android:id="@+id/title_switcher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:background="#91A17A"
+                    android:background="#5A97AF"
                     android:layout_width="match_parent"
                     android:layout_height="48dp">
 
@@ -36,17 +36,17 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:imeOptions="actionNext"
-                        android:paddingRight="30dp"/>
+                        android:paddingRight="48dp" />
 
                     <IconTextView
                         android:id="@+id/next_button"
                         android:layout_gravity="center_vertical|right"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="48dp"
+                        android:gravity="center"
+                        android:layout_height="48dp"
                         android:text="{fa-arrow-right}"
                         android:textSize="28dp"
-                        android:layout_marginRight="5dp"
-                        android:textColor="@color/main_dark"/>
+                        android:textColor="@color/main_dark" />
                 </FrameLayout>
 
                 <ProgressBar
@@ -54,7 +54,7 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:progressDrawable="@drawable/custom_pb"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"/>
+                    android:layout_height="3dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"/>
+                        android:layout_marginBottom="10dp" />
 
                     <TextView
                         android:id="@+id/step_text"
@@ -78,7 +78,7 @@
                         android:textColor="@color/main_dark"
                         android:fontFamily="sans-serif-thin"
                         android:textSize="18sp"
-                        android:text="1/6"/>
+                        android:text="1/6" />
 
 
                 </LinearLayout>
@@ -88,19 +88,34 @@
                 android:id="@+id/details_switcher"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
 
-    <IconTextView
+    <LinearLayout
+        android:orientation="vertical"
         android:id="@+id/completed"
         android:visibility="gone"
+        android:background="@color/main"
         android:gravity="center"
-        android:background="@color/main_dark_light"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="{fa-check-circle}"
-        android:textSize="128dp"
-        android:textColor="@color/main_light"/>
+        android:layout_height="match_parent">
+
+        <IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{fa-check-circle}"
+            android:textSize="128dp"
+            android:textColor="@color/main_dark" />
+
+        <TextView
+            android:id="@+id/retry"
+            android:text="Retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_dark"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="25sp" />
+    </LinearLayout>
 </FrameLayout>
