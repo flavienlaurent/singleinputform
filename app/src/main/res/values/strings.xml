@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">minimalform</string>
+    <string name="email">E-mail</string>
+    <string name="email_error">Empty or not well-formed</string>
+    <string name="email_details">Your e-mail will be used as your login. Type the one you use most often.</string>
+    <string name="password">Password</string>
+    <string name="password_error">Empty or not 5-chars long</string>
+    <string name="password_details">Type your own password (5-chars long). Your personal information is protected with this password.</string>
+    <string name="year_of_birth">Year of birth</string>
+    <string name="year_of_birth_error">Empty or not 4-digits long.</string>
+    <string name="year_of_birth_details">We will use your year of birth (4-digits long) only to calculate your age.</string>
+    <string name="city">City</string>
+    <string name="city_error">Enter a city.</string>
+    <string name="city_details">We need this information to find you if you mess with us.</string>
+
+</resources>

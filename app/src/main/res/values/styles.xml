@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/main</item>
+        <item name="android:editTextBackground">@drawable/custom_edit_text_holo_light</item>
+    </style>
+
+    <color name="main">#A1B389</color>
+    <color name="main_light">#99AA81</color>
+    <color name="main_dark">#5B654D</color>
+    <color name="main_dark_light">#6B7659</color>
+    <color name="error">#83392F</color>
+</resources>
