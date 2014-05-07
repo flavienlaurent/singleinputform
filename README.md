@@ -30,6 +30,6 @@ License
     
     
 
-[1] https://github.com/codrops/MinimalForm
-[2] http://developer.android.com/reference/android/widget/TextSwitcher.html
-[3] https://github.com/flavienlaurent/singleinputform/blob/master/misc/screen.png
+[1]: https://github.com/codrops/MinimalForm
+[2]: http://developer.android.com/reference/android/widget/TextSwitcher.html
+[3]: https://github.com/flavienlaurent/singleinputform/blob/master/misc/screen.png
