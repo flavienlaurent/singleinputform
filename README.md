@@ -9,7 +9,7 @@ I implemented an account creation form with only one EditText. The idea here is 
 
 Also, I completely rediscovered [TextSwitcher][2] to animate the form: title, error message. It's very basic but simple to use.
 
-![Example Image][3]
+![Example Image](flavienlaurent.github.com/singleinputform/misc/screen.png)
 
 License
 -----------
