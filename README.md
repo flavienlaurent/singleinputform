@@ -9,7 +9,7 @@ I implemented an account creation form with only one EditText. The idea here is 
 
 Also, I completely rediscovered [TextSwitcher][2] to animate the form: title, error message. It's very basic but simple to use.
 
-![Example Image](flavienlaurent.github.com/singleinputform/misc/screen.png)
+https://www.youtube.com/watch?v=n6LrI0tL9ZA
 
 License
 -----------
@@ -32,4 +32,3 @@ License
 
 [1]: https://github.com/codrops/MinimalForm
 [2]: http://developer.android.com/reference/android/widget/TextSwitcher.html
-[3]: https://github.com/flavienlaurent/singleinputform/blob/master/misc/screen.png
