@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">minimalform</string>
+    <string name="app_name">Single input form</string>
     <string name="email">E-mail</string>
     <string name="email_error">Empty or not well-formed</string>
     <string name="email_details">Your e-mail will be used as your login. Type the one you use most often.</string>
