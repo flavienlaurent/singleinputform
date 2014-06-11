@@ -11,6 +11,8 @@ Also, I completely rediscovered [TextSwitcher][2] to animate the form: title, er
 
 https://www.youtube.com/watch?v=n6LrI0tL9ZA
 
+There's also a library available: [Android-SingleInputForm][3]
+
 License
 -----------
 
@@ -32,3 +34,4 @@ License
 
 [1]: https://github.com/codrops/MinimalForm
 [2]: http://developer.android.com/reference/android/widget/TextSwitcher.html
+[3]: https://github.com/HeinrichReimer/Android-SingleInputForm
